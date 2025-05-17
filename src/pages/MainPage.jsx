@@ -1,5 +1,5 @@
 // src/pages/MainPage.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import SpeciesSummary from '../components/species_summary';
 import SpeciesTabs from '../components/species_details';
 import EmergencySection from '../components/species_emergency';
@@ -8,6 +8,16 @@ import Navbar from '../components/Navbar';
 import FancyParticles from '../components/FancyParticles';
 
 const MainPage = () => {
+  const [totalPopulation, setTotalPopulation] = useState(0);
+
+  useEffect(() => {
+    const fetchSpeciesCount = async () => {
+      const response = await fetch('https://trenden-kodlayanlar-backend.onrender.com/api/statistics/total-population/');
+      const data = await response.json();
+      setTotalPopulation(data.totalPopulation);
+    };
+    fetchSpeciesCount();
+  }, []);
   return (
     <div className="min-h-screen bg-gray-800 text-white pt-24 px-6">
       <Navbar />
@@ -17,7 +27,7 @@ const MainPage = () => {
         <FancyParticles />
 
         <div className="relative z-10">
-          <SpeciesSummary totalAlive={200} speciesCount={5} />
+          <SpeciesSummary totalAlive={totalPopulation} speciesCount={5} />
         </div>
 
         <div className="relative z-10">
