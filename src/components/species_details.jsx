@@ -79,15 +79,17 @@ const SpeciesTabs = () => {
     }
 
     return (
-        <div className={`rounded-lg p-6 ${bgClass} shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]`}>
+        <div className={`rounded-lg p-6 ${bgClass} transition-all duration-700 ease-in-out shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]`}>
             {/* Tabs */}
-            <div className={`flex space-x-4 mb-4`}>
+            <div className={`bg-transparent rounded-full p-2 flex flex-wrap sm:flex-nowrap sm:overflow-x-auto justify-center items-center gap-2 mb-6 transition-all duration-700 ease-in-out`}>
                 {Object.keys(speciesStatistics).map((speciesName) => (
                     <button
                         key={speciesName}
                         onClick={() => setSelectedSpecies(speciesName)}
-                        className={`px-4 py-2 rounded ${
-                            selectedSpecies === speciesName ? 'bg-blue-500 text-white' : 'bg-gray-300 text-black'
+                        className={`px-4 py-2 rounded-full mx-1 whitespace-nowrap transition-all duration-500 ${
+                            selectedSpecies === speciesName
+                            ? 'bg-white text-black shadow'
+                            : 'bg-gray-500 text-white'
                         }`}
                     >
                         {speciesName}
@@ -96,18 +98,20 @@ const SpeciesTabs = () => {
             </div>
 
             {/* Content */}
-            <div className={`${bgClass} p-6 rounded-lg`}>
-                <h2 className="text-2xl font-bold mb-2">{selectedSpecies}</h2>
-                <p className="mb-4">{speciesStatistics[selectedSpecies].description}</p>
-                <img
-                    src={imageSrc}
-                    alt={selectedSpecies}
-                    className="w-full h-full object-cover rounded mb-4"
-                    onError={(e) => {
-                        console.error('Image failed to load:', imageSrc);
-                        e.target.src = 'fallback-image-url.png'; // Add a fallback image URL
-                    }}
-                />
+            <div className={`${bgClass} p-6 rounded-lg transition-all duration-700 ease-in-out`}>
+                <h2 className="text-5xl font-bold mb-2">{selectedSpecies}</h2>
+                <div className="flex flex-col sm:flex-row items-start gap-6 mb-6 mt-6">
+                    <img
+                        src={imageSrc}
+                        alt={selectedSpecies}
+                        className="sm:w-[500px] sm:h-[320px] object-cover w-full rounded mb-4"
+                        onError={(e) => {
+                            console.error('Image failed to load:', imageSrc);
+                            e.target.src = 'fallback-image-url.png'; // Add a fallback image URL
+                        }}
+                    />
+                    <p className="text-white flex-1 text-lg">{speciesStatistics[selectedSpecies].description}</p>
+                </div>
                 <div className="grid grid-cols-2 gap-4">
                     {speciesStatistics[selectedSpecies].fields.map((field) => (
                         <div key={field.key} className="bg-gray-600 p-4 rounded">

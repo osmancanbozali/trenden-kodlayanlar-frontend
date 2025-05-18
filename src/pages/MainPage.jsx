@@ -35,7 +35,7 @@ const MainPage = () => {
           <SpeciesTabs />
         </div>
 
-        <div className="relative z-10">
+        <div className="relative z-10 pb-8">
           <EmergencySection />
         </div>
       </div>
