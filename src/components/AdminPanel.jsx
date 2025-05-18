@@ -15,7 +15,7 @@ const AdminPanel = () => {
   useEffect(() => {
     const fetchSpeciesData = async () => {
       try {
-        const response = await fetch('https://trenden-kodlayanlar-backend.onrender.com/api/bio-species/');
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/bio-species/`);
         const data = await response.json();
         setSpeciesData(data);
       } catch (error) {

@@ -13,7 +13,7 @@ const MainPage = () => {
   
   useEffect(() => {
     const fetchSpeciesCount = async () => {
-      const response = await fetch('https://trenden-kodlayanlar-backend.onrender.com/api/statistics/total-population/');
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/statistics/total-population/`);
       const data = await response.json();
       setTotalPopulation(data.totalPopulation);
     };

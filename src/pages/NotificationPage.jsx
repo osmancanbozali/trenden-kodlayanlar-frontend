@@ -94,7 +94,7 @@ const NotificationPage = () => {
         const userX = Math.floor(Math.random() * (1014 - 10 + 1) + 10);
         const userY = Math.floor(Math.random() * (1014 - 10 + 1) + 10);
 
-        const response = await fetch(`https://trenden-kodlayanlar-backend.onrender.com/api/emergency/start`, {
+        const response = await fetch(`${import.meta.env.VITE_API_URL}/api/emergency/start`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ userX, userY }),
@@ -225,10 +225,10 @@ const NotificationPage = () => {
       }
 
       setStatusMessage('Kaydınız gönderiliyor...');
-      let targetEndpoint = `https://trenden-kodlayanlar-backend.onrender.com/api/emergency/${sessionId}/message`;
+      let targetEndpoint = `${import.meta.env.VITE_API_URL}/api/emergency/${sessionId}/message`;
       let wasConfirmCall = false;
       if (shouldProceedToConfirmation) {
-        targetEndpoint = `https://trenden-kodlayanlar-backend.onrender.com/api/emergency/${sessionId}/confirm`;
+        targetEndpoint = `${import.meta.env.VITE_API_URL}/api/emergency/${sessionId}/confirm`;
         wasConfirmCall = true;
       }
 

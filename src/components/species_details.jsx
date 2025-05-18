@@ -1,6 +1,5 @@
 // src/components/SpeciesTabs.jsx
 import React, { useState, useEffect } from 'react';
-import useCountUp from '../hooks/useCountUp';
 import speciesStatistics from '../models/speciesStatistics';
 
 const SpeciesTabs = () => {
@@ -14,7 +13,7 @@ const SpeciesTabs = () => {
     useEffect(() => {
         const fetchSpeciesData = async () => {
             try {
-                const response = await fetch('https://trenden-kodlayanlar-backend.onrender.com/api/statistics/all/');
+                const response = await fetch(`${import.meta.env.VITE_API_URL}/api/statistics/all/`);
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
