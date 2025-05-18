@@ -1,8 +1,8 @@
 const speciesStatistics = {
     "Parlak Dikenli Kertenkele": {
       class: "Reptilia Luminis",
-      description: "Bu tür, Valyria’nın sıcak ve nemli tropik ormanlarında yaşayan, geceleri aktif olan bir sürüngendir. Böcekler ve ışığa gelen mantar sporlarıyla beslenir. Derisinden yaydığı hafif ışık, hem iletişim hem eşleşme için kullanılır. Sağlıklı bireylerde parlak pul yapısı ve dengeli ışık üretimi görülürken, donukluk veya hareketsizlik genelde hastalık belirtisidir. Genellikle yalnız yaşar, yalnızca üreme dönemlerinde kısa süreli eşleşme kümeleri oluşturur. Madencilik faaliyetleri nedeniyle yaşam alanları tehdit altındadır.",
-      image: "src/images/Parlak_Dikenli_Kertenkele.png",
+      description: "Bu tür, Valyria'nın sıcak ve nemli tropik ormanlarında yaşayan, geceleri aktif olan bir sürüngendir. Böcekler ve ışığa gelen mantar sporlarıyla beslenir. Derisinden yaydığı hafif ışık, hem iletişim hem eşleşme için kullanılır. Sağlıklı bireylerde parlak pul yapısı ve dengeli ışık üretimi görülürken, donukluk veya hareketsizlik genelde hastalık belirtisidir. Genellikle yalnız yaşar, yalnızca üreme dönemlerinde kısa süreli eşleşme kümeleri oluşturur. Madencilik faaliyetleri nedeniyle yaşam alanları tehdit altındadır.",
+      image: "/species_images/Parlak_Dikenli_Kertenkele.png",
       themeColor: "bg-gradient-to-r from-[#2ca0b0] to-[#992fbd]",
       fields: [
         { key: "totalPopulation", label: "Toplam Popülasyon" },
@@ -19,8 +19,8 @@ const speciesStatistics = {
     },
     "Kelebek Kanatlı Anka": {
       class: "Mammalia Volantis",
-      description: "Bu tür, Valyria’nın yüksek rakımlı dağ yamaçlarında ve rüzgârlı mağara girişlerinde yaşayan, gece aktif olan uçan bir memelidir. Geniş, yarı şeffaf kanatlarıyla süzülerek uçar; bu kanatlar sayesinde hem yön bulur hem de havadaki titreşimleri algılayarak çevresini hisseder. Beslenmesini hava planktonları, gececil böcekler ve dağ polenleriyle sağlar. İşitme frekansı oldukça yüksektir ve tür içi iletişimini insan kulağının duyamayacağı fısıltı seslerle gerçekleştirir. Sağlıklı bireylerde düzenli uçuş, dengeli solunum ve parlak kanat zarları gözlemlenirken, tepki azalması ya da kanat solgunluğu hastalık göstergesidir. Koloni hâlinde yaşarlar ve sisli mevsimlerde üreme dönemine girerler; dişiler canlı doğum yapar. Doğal göç rotalarının bozulması ve yüksek bölgelere kurulan rüzgâr kuleleri nedeniyle popülasyonları tehdit altındadır.",
-      image: "src/images/Kelebek_Kanatlı_Anka.png",
+      description: "Bu tür, Valyria'nın yüksek rakımlı dağ yamaçlarında ve rüzgârlı mağara girişlerinde yaşayan, gece aktif olan uçan bir memelidir. Geniş, yarı şeffaf kanatlarıyla süzülerek uçar; bu kanatlar sayesinde hem yön bulur hem de havadaki titreşimleri algılayarak çevresini hisseder. Beslenmesini hava planktonları, gececil böcekler ve dağ polenleriyle sağlar. İşitme frekansı oldukça yüksektir ve tür içi iletişimini insan kulağının duyamayacağı fısıltı seslerle gerçekleştirir. Sağlıklı bireylerde düzenli uçuş, dengeli solunum ve parlak kanat zarları gözlemlenirken, tepki azalması ya da kanat solgunluğu hastalık göstergesidir. Koloni hâlinde yaşarlar ve sisli mevsimlerde üreme dönemine girerler; dişiler canlı doğum yapar. Doğal göç rotalarının bozulması ve yüksek bölgelere kurulan rüzgâr kuleleri nedeniyle popülasyonları tehdit altındadır.",
+      image: "/species_images/Kelebek_Kanatlı_Anka.png",
       themeColor: "bg-gradient-to-r from-[#df59db] to-[#f29c4b]",
       fields: [
         { key: "totalPopulation", label: "Toplam Popülasyon" },
@@ -38,7 +38,7 @@ const speciesStatistics = {
     "Simli Mantar": {
       class: "Fungalia Intellecta",
       description: "Bu tür, nemli orman altı topraklarında yaşayan, bitkilerle simbiyotik ilişki kuran bir mantar organizmasıdır. Işığı emerek enerji üretir ve topraktan mineral çekerek beslenir. Çevresini hissetme ve diğer kolonilerle sinyal alışverişi yapma becerisiyle dikkat çeker. Yüksek misel yoğunluğu ve dengeli nem oranı sağlıklı bir bireyin işaretidir. Koloni hâlinde yaşar ve spor üretimi yoluyla çoğalır. Tarımsal ilaçların etkisiyle koloniler zarar gördüğünden dikkatle korunmaktadır.",
-      image: "/src/images/Simli_Mantar.png",
+      image: "/species_images/Simli_Mantar.png",
       themeColor: "bg-gradient-to-r from-[#f351fa] to-[#0b13b6]",
       fields: [
         { key: "totalPopulation", label: "Toplam Popülasyon" },
@@ -56,7 +56,7 @@ const speciesStatistics = {
     "Fosforlu Göl Balığı": {
       class: "Pisces Photonica",
       description: "Bu tür, ılık tatlı su göllerinde yaşayan ve ışığın derinliklere ulaştığı sakin sularda yüzmeyi tercih eden bir balıktır. Plankton, yosun ve küçük su canlılarıyla beslenir. Kuyruğundaki parlak pigmentler sayesinde yön bulur ve sürüsüyle iletişim kurar. Derisindeki canlı renkler ve düzenli solungaç hareketleri sağlıklı bireylerin ayırt edilmesini sağlar. Sürü hâlinde yaşar ve su bitkileri üzerine bırakılan yumurtalarla çoğalır. Artan su kirliliği, bazı bölgelerde popülasyonunu tehdit etmektedir.",
-      image: "src/images/Fosforlu_Göl_Balığı.png",
+      image: "/species_images/Fosforlu_Göl_Balığı.png",
       themeColor: "bg-gradient-to-r from-[#fe9e1d] to-[#1dfee2]",
       fields: [
         { key: "totalPopulation", label: "Toplam Popülasyon" },
@@ -73,8 +73,8 @@ const speciesStatistics = {
     },
     "Buzul Semenderi": {
       class: "Amphibia Glacialis",
-      description: "Bu tür, Valyria’nın kuzey kutup bölgelerinde, donmuş mağaralarda ve buz altı göllerde yaşamını sürdüren bir canlıdır. Beslenmesini mikroalgler ve buz altı minerallerinden sağlar. Derisinin altından yayılan mavi parıltı vücut ısısını dengelerken, aynı zamanda uzaktaki bireylerle iletişim kurmaya da yarar. Sabit iç sıcaklık ve hızlı refleksler sağlıklı bireylerde görülür. Yalnız yaşar ancak yılın sonunda eşleşme dönemi boyunca kısa süreli eş bulur ve doğrudan canlı doğum yapar. Buzulların erimesi nedeniyle yaşam alanı daralmakta ve tür koruma altında tutulmaktadır.",
-      image: "src/images/Buzul_Semenderi.png",
+      description: "Bu tür, Valyria'nın kuzey kutup bölgelerinde, donmuş mağaralarda ve buz altı göllerde yaşamını sürdüren bir canlıdır. Beslenmesini mikroalgler ve buz altı minerallerinden sağlar. Derisinin altından yayılan mavi parıltı vücut ısısını dengelerken, aynı zamanda uzaktaki bireylerle iletişim kurmaya da yarar. Sabit iç sıcaklık ve hızlı refleksler sağlıklı bireylerde görülür. Yalnız yaşar ancak yılın sonunda eşleşme dönemi boyunca kısa süreli eş bulur ve doğrudan canlı doğum yapar. Buzulların erimesi nedeniyle yaşam alanı daralmakta ve tür koruma altında tutulmaktadır.",
+      image: "/species_images/Buzul_Semenderi.png",
       themeColor: "bg-gradient-to-r from-[#1d27fe] to-[#2027ff]",
       fields: [
         { key: "totalPopulation", label: "Toplam Popülasyon" },
