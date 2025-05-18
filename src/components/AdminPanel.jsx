@@ -36,7 +36,7 @@ const AdminPanel = () => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
     const mapImage = new Image();
-    mapImage.src = 'public/species_images/map.jpg';
+    mapImage.src = '/species_images/map.jpg';
 
     mapImage.onload = () => {
       ctx.clearRect(0, 0, canvasWidth, canvasHeight);
