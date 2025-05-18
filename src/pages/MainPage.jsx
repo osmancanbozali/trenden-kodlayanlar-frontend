@@ -7,9 +7,10 @@ import Navbar from '../components/Navbar';
 //import BackgroundParticles from '../components/FancyParticles';
 import FancyParticles from '../components/FancyParticles';
 
+
 const MainPage = () => {
   const [totalPopulation, setTotalPopulation] = useState(0);
-
+  
   useEffect(() => {
     const fetchSpeciesCount = async () => {
       const response = await fetch('https://trenden-kodlayanlar-backend.onrender.com/api/statistics/total-population/');
