@@ -73,19 +73,19 @@ const AdminPanel = () => {
     <div className="relative min-h-screen bg-gray-900 text-white overflow-hidden px-10 pt-24 py-8">
       <FancyParticles />
         <AdminNavbar/>
-      <div className="relative z-10 flex gap-6 justify-center items-start">
+      <div className="relative z-10 flex flex-col sm:flex-row gap-6 justify-center items-start w-full">
         {/* Map */}
         <canvas
           ref={canvasRef}
           width={canvasWidth}
           height={canvasHeight}
           onClick={handleCanvasClick}
-          className="border rounded-lg shadow-lg"
+          className="border rounded-lg shadow-lg w-full lg:w-auto"
         />
 
         {/* Info Card */}
         {selectedSpecies && (
-          <div className="bg-black p-6 rounded-lg  w-[400px] max-h-[600px] overflow-y-auto shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]">
+          <div className="bg-black p-6 rounded-lg  w-full sm:w-[400px] max-h-[600px] overflow-y-auto shadow-[0_0_20px_2px_rgba(255,255,255,0.2)]">
             <h2 className="text-2xl font-bold mb-2">{selectedSpecies.speciesType}</h2>
             <p className="mb-1"><strong>Sınıf:</strong> {selectedSpecies.class}</p>
             <p className="mb-1"><strong>Habitat:</strong> {selectedSpecies.habitat}</p>
